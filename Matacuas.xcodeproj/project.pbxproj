@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
+		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
+		5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF365D1CBE5A2200E8A45F /* Main.storyboard */; };
+		5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF36601CBE5A2200E8A45F /* Assets.xcassets */; };
+		5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF36621CBE5A2200E8A45F /* LaunchScreen.storyboard */; };
+		5BAF366F1CBE5A2200E8A45F /* MatacuasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF366E1CBE5A2200E8A45F /* MatacuasTests.swift */; };
+		5BAF367A1CBE5A2200E8A45F /* MatacuasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36791CBE5A2200E8A45F /* MatacuasUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BAF366B1CBE5A2200E8A45F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BAF364E1CBE5A2200E8A45F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAF36551CBE5A2200E8A45F;
+			remoteInfo = Matacuas;
+		};
+		5BAF36761CBE5A2200E8A45F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BAF364E1CBE5A2200E8A45F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAF36551CBE5A2200E8A45F;
+			remoteInfo = Matacuas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BAF365B1CBE5A2200E8A45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BAF365E1CBE5A2200E8A45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BAF36601CBE5A2200E8A45F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BAF36631CBE5A2200E8A45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BAF36651CBE5A2200E8A45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAF366A1CBE5A2200E8A45F /* MatacuasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatacuasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAF366E1CBE5A2200E8A45F /* MatacuasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatacuasTests.swift; sourceTree = "<group>"; };
+		5BAF36701CBE5A2200E8A45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAF36751CBE5A2200E8A45F /* MatacuasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatacuasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAF36791CBE5A2200E8A45F /* MatacuasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatacuasUITests.swift; sourceTree = "<group>"; };
+		5BAF367B1CBE5A2200E8A45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BAF36531CBE5A2200E8A45F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36671CBE5A2200E8A45F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36721CBE5A2200E8A45F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BAF364D1CBE5A2200E8A45F = {
+			isa = PBXGroup;
+			children = (
+				5BAF36581CBE5A2200E8A45F /* Matacuas */,
+				5BAF366D1CBE5A2200E8A45F /* MatacuasTests */,
+				5BAF36781CBE5A2200E8A45F /* MatacuasUITests */,
+				5BAF36571CBE5A2200E8A45F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BAF36571CBE5A2200E8A45F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF36561CBE5A2200E8A45F /* Matacuas.app */,
+				5BAF366A1CBE5A2200E8A45F /* MatacuasTests.xctest */,
+				5BAF36751CBE5A2200E8A45F /* MatacuasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BAF36581CBE5A2200E8A45F /* Matacuas */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */,
+				5BAF365B1CBE5A2200E8A45F /* ViewController.swift */,
+				5BAF365D1CBE5A2200E8A45F /* Main.storyboard */,
+				5BAF36601CBE5A2200E8A45F /* Assets.xcassets */,
+				5BAF36621CBE5A2200E8A45F /* LaunchScreen.storyboard */,
+				5BAF36651CBE5A2200E8A45F /* Info.plist */,
+			);
+			path = Matacuas;
+			sourceTree = "<group>";
+		};
+		5BAF366D1CBE5A2200E8A45F /* MatacuasTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF366E1CBE5A2200E8A45F /* MatacuasTests.swift */,
+				5BAF36701CBE5A2200E8A45F /* Info.plist */,
+			);
+			path = MatacuasTests;
+			sourceTree = "<group>";
+		};
+		5BAF36781CBE5A2200E8A45F /* MatacuasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF36791CBE5A2200E8A45F /* MatacuasUITests.swift */,
+				5BAF367B1CBE5A2200E8A45F /* Info.plist */,
+			);
+			path = MatacuasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BAF36551CBE5A2200E8A45F /* Matacuas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAF367E1CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "Matacuas" */;
+			buildPhases = (
+				5BAF36521CBE5A2200E8A45F /* Sources */,
+				5BAF36531CBE5A2200E8A45F /* Frameworks */,
+				5BAF36541CBE5A2200E8A45F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Matacuas;
+			productName = Matacuas;
+			productReference = 5BAF36561CBE5A2200E8A45F /* Matacuas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BAF36691CBE5A2200E8A45F /* MatacuasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAF36811CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "MatacuasTests" */;
+			buildPhases = (
+				5BAF36661CBE5A2200E8A45F /* Sources */,
+				5BAF36671CBE5A2200E8A45F /* Frameworks */,
+				5BAF36681CBE5A2200E8A45F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAF366C1CBE5A2200E8A45F /* PBXTargetDependency */,
+			);
+			name = MatacuasTests;
+			productName = MatacuasTests;
+			productReference = 5BAF366A1CBE5A2200E8A45F /* MatacuasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BAF36741CBE5A2200E8A45F /* MatacuasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAF36841CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "MatacuasUITests" */;
+			buildPhases = (
+				5BAF36711CBE5A2200E8A45F /* Sources */,
+				5BAF36721CBE5A2200E8A45F /* Frameworks */,
+				5BAF36731CBE5A2200E8A45F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAF36771CBE5A2200E8A45F /* PBXTargetDependency */,
+			);
+			name = MatacuasUITests;
+			productName = MatacuasUITests;
+			productReference = 5BAF36751CBE5A2200E8A45F /* MatacuasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BAF364E1CBE5A2200E8A45F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Alberto Sagrado Amador";
+				TargetAttributes = {
+					5BAF36551CBE5A2200E8A45F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = F9M9TR6DUY;
+					};
+					5BAF36691CBE5A2200E8A45F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = F9M9TR6DUY;
+						TestTargetID = 5BAF36551CBE5A2200E8A45F;
+					};
+					5BAF36741CBE5A2200E8A45F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = F9M9TR6DUY;
+						TestTargetID = 5BAF36551CBE5A2200E8A45F;
+					};
+				};
+			};
+			buildConfigurationList = 5BAF36511CBE5A2200E8A45F /* Build configuration list for PBXProject "Matacuas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BAF364D1CBE5A2200E8A45F;
+			productRefGroup = 5BAF36571CBE5A2200E8A45F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAF36551CBE5A2200E8A45F /* Matacuas */,
+				5BAF36691CBE5A2200E8A45F /* MatacuasTests */,
+				5BAF36741CBE5A2200E8A45F /* MatacuasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BAF36541CBE5A2200E8A45F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */,
+				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
+				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36681CBE5A2200E8A45F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36731CBE5A2200E8A45F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAF36521CBE5A2200E8A45F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */,
+				5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36661CBE5A2200E8A45F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF366F1CBE5A2200E8A45F /* MatacuasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAF36711CBE5A2200E8A45F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF367A1CBE5A2200E8A45F /* MatacuasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BAF366C1CBE5A2200E8A45F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BAF36551CBE5A2200E8A45F /* Matacuas */;
+			targetProxy = 5BAF366B1CBE5A2200E8A45F /* PBXContainerItemProxy */;
+		};
+		5BAF36771CBE5A2200E8A45F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BAF36551CBE5A2200E8A45F /* Matacuas */;
+			targetProxy = 5BAF36761CBE5A2200E8A45F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BAF365D1CBE5A2200E8A45F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAF365E1CBE5A2200E8A45F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BAF36621CBE5A2200E8A45F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAF36631CBE5A2200E8A45F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BAF367C1CBE5A2200E8A45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BAF367D1CBE5A2200E8A45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAF367F1CBE5A2200E8A45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Matacuas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.Matacuas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BAF36801CBE5A2200E8A45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Matacuas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.Matacuas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BAF36821CBE5A2200E8A45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MatacuasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.MatacuasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matacuas.app/Matacuas";
+			};
+			name = Debug;
+		};
+		5BAF36831CBE5A2200E8A45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MatacuasTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.MatacuasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matacuas.app/Matacuas";
+			};
+			name = Release;
+		};
+		5BAF36851CBE5A2200E8A45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MatacuasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.MatacuasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Matacuas;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5BAF36861CBE5A2200E8A45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MatacuasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.MatacuasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Matacuas;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BAF36511CBE5A2200E8A45F /* Build configuration list for PBXProject "Matacuas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF367C1CBE5A2200E8A45F /* Debug */,
+				5BAF367D1CBE5A2200E8A45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BAF367E1CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "Matacuas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF367F1CBE5A2200E8A45F /* Debug */,
+				5BAF36801CBE5A2200E8A45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BAF36811CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "MatacuasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF36821CBE5A2200E8A45F /* Debug */,
+				5BAF36831CBE5A2200E8A45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BAF36841CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "MatacuasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF36851CBE5A2200E8A45F /* Debug */,
+				5BAF36861CBE5A2200E8A45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BAF364E1CBE5A2200E8A45F /* Project object */;
+}
