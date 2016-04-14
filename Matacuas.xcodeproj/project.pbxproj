@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B03D0921CC0210600D7EE59 /* log in google.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D08E1CC0210600D7EE59 /* log in google.png */; settings = {ASSET_TAGS = (); }; };
+		5B03D0941CC0210600D7EE59 /* log in facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0901CC0210600D7EE59 /* log in facebook.png */; settings = {ASSET_TAGS = (); }; };
+		5B03D0951CC0210600D7EE59 /* sign in google.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0911CC0210600D7EE59 /* sign in google.png */; settings = {ASSET_TAGS = (); }; };
+		5B03D0981CC0278A00D7EE59 /* sign in facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0971CC0278A00D7EE59 /* sign in facebook.png */; settings = {ASSET_TAGS = (); }; };
 		5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */; settings = {ASSET_TAGS = (); }; };
 		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
 		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B03D08E1CC0210600D7EE59 /* log in google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "log in google.png"; path = "../../Downloads/log in google.png"; sourceTree = "<group>"; };
+		5B03D0901CC0210600D7EE59 /* log in facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "log in facebook.png"; path = "../../Downloads/log in facebook.png"; sourceTree = "<group>"; };
+		5B03D0911CC0210600D7EE59 /* sign in google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sign in google.png"; path = "../../Downloads/sign in google.png"; sourceTree = "<group>"; };
+		5B03D0971CC0278A00D7EE59 /* sign in facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sign in facebook.png"; path = "../../Downloads/sign in facebook.png"; sourceTree = "<group>"; };
 		5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fondo.png; path = "../6º - Curso 2015-2016/2º Cuatrimestre/ISST/TRABAJO ISST/fondo.png"; sourceTree = "<group>"; };
 		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,14 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B03D0961CC0210E00D7EE59 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				5B03D08E1CC0210600D7EE59 /* log in google.png */,
+				5B03D0901CC0210600D7EE59 /* log in facebook.png */,
+				5B03D0911CC0210600D7EE59 /* sign in google.png */,
+				5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */,
+				5B03D0971CC0278A00D7EE59 /* sign in facebook.png */,
+			);
+			name = media;
+			sourceTree = "<group>";
+		};
 		5BAF364D1CBE5A2200E8A45F = {
 			isa = PBXGroup;
 			children = (
-				5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */,
 				5BAF36581CBE5A2200E8A45F /* Matacuas */,
 				5BAF366D1CBE5A2200E8A45F /* MatacuasTests */,
 				5BAF36781CBE5A2200E8A45F /* MatacuasUITests */,
 				5BAF36571CBE5A2200E8A45F /* Products */,
+				5B03D0961CC0210E00D7EE59 /* media */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,9 +255,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */,
+				5B03D0981CC0278A00D7EE59 /* sign in facebook.png in Resources */,
+				5B03D0941CC0210600D7EE59 /* log in facebook.png in Resources */,
+				5B03D0951CC0210600D7EE59 /* sign in google.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
 				5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
+				5B03D0921CC0210600D7EE59 /* log in google.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

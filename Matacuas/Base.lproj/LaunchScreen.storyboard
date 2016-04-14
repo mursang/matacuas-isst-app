@@ -21,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="txs-lW-HCt">
                                 <rect key="frame" x="10" y="-1126" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="G1J-IV-8MG"/>
-                                    <constraint firstAttribute="width" constant="240" id="ew3-C2-duC"/>
+                                    <constraint firstAttribute="height" constant="128" id="PTq-jP-TFp"/>
+                                    <constraint firstAttribute="width" constant="240" id="h5n-2W-u60"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matacuás" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7H-f5-evG">
@@ -34,18 +34,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-OQ-GNU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matacuás" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB6-Jb-M1y">
+                                <rect key="frame" x="217" y="100" width="166" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="26b-j4-cR4"/>
+                                    <constraint firstAttribute="width" constant="166" id="YyS-Md-Uv0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="3hh-ip-khs"/>
-                            <constraint firstItem="txs-lW-HCt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-1126" id="CKj-o2-DDm"/>
-                            <constraint firstItem="txs-lW-HCt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-10" id="ZoR-rT-LKc"/>
-                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="centerX" secondItem="c7H-f5-evG" secondAttribute="centerX" id="bK7-mb-HmB"/>
-                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bwH-Sq-f4c"/>
-                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lIi-Oc-Vy3"/>
-                            <constraint firstAttribute="trailing" secondItem="Ht8-OQ-GNU" secondAttribute="trailing" id="up7-vx-r6W"/>
-                            <constraint firstItem="c7H-f5-evG" firstAttribute="centerY" secondItem="Ht8-OQ-GNU" secondAttribute="centerY" id="yoU-6B-GHm"/>
+                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4gU-LV-RbX"/>
+                            <constraint firstAttribute="trailing" secondItem="Ht8-OQ-GNU" secondAttribute="trailing" id="EkT-JX-3Nn"/>
+                            <constraint firstItem="c7H-f5-evG" firstAttribute="centerY" secondItem="Ht8-OQ-GNU" secondAttribute="centerY" id="Gbt-6G-KYZ"/>
+                            <constraint firstItem="WB6-Jb-M1y" firstAttribute="centerX" secondItem="Ht8-OQ-GNU" secondAttribute="centerX" id="JVv-dH-vCE"/>
+                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ojd-ob-OJD"/>
+                            <constraint firstItem="Ht8-OQ-GNU" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Pch-jt-NuC"/>
+                            <constraint firstItem="txs-lW-HCt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-1126" id="fh8-ZP-y8C"/>
+                            <constraint firstItem="txs-lW-HCt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-10" id="mv5-Bf-rMs"/>
+                            <constraint firstItem="WB6-Jb-M1y" firstAttribute="centerX" secondItem="c7H-f5-evG" secondAttribute="centerX" id="qP6-kJ-eiC"/>
+                            <constraint firstItem="WB6-Jb-M1y" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="zhz-a7-T8R"/>
                         </constraints>
                     </view>
                 </viewController>
