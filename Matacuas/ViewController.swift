@@ -9,10 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var email: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        /*
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.redColor().CGColor
+        border.frame = CGRect(x: 0, y: email.frame.size.height - width, width:  email.frame.size.width, height: email.frame.size.height)
+        
+        border.borderWidth = width
+        email.layer.addSublayer(border)
+        email.layer.masksToBounds = true
+        */
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

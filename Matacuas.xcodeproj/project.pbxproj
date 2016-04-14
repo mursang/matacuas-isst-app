@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */; settings = {ASSET_TAGS = (); }; };
 		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
 		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
 		5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF365D1CBE5A2200E8A45F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fondo.png; path = "../6º - Curso 2015-2016/2º Cuatrimestre/ISST/TRABAJO ISST/fondo.png"; sourceTree = "<group>"; };
 		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAF365B1CBE5A2200E8A45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		5BAF364D1CBE5A2200E8A45F = {
 			isa = PBXGroup;
 			children = (
+				5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */,
 				5BAF36581CBE5A2200E8A45F /* Matacuas */,
 				5BAF366D1CBE5A2200E8A45F /* MatacuasTests */,
 				5BAF36781CBE5A2200E8A45F /* MatacuasUITests */,
@@ -233,6 +236,7 @@
 			files = (
 				5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
+				5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
