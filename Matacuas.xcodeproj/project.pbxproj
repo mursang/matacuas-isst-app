@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B03D0921CC0210600D7EE59 /* log in google.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D08E1CC0210600D7EE59 /* log in google.png */; settings = {ASSET_TAGS = (); }; };
-		5B03D0941CC0210600D7EE59 /* log in facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0901CC0210600D7EE59 /* log in facebook.png */; settings = {ASSET_TAGS = (); }; };
-		5B03D0951CC0210600D7EE59 /* sign in google.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0911CC0210600D7EE59 /* sign in google.png */; settings = {ASSET_TAGS = (); }; };
-		5B03D0981CC0278A00D7EE59 /* sign in facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B03D0971CC0278A00D7EE59 /* sign in facebook.png */; settings = {ASSET_TAGS = (); }; };
-		5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */; settings = {ASSET_TAGS = (); }; };
+		5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3EE1CC132820090BB53 /* googleLogIn.png */; };
+		5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3F11CC1329D0090BB53 /* LogInViewController.swift */; };
+		5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3F31CC1334F0090BB53 /* facebookLogIn.png */; };
+		5592A3F61CC133BF0090BB53 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3F51CC133BF0090BB53 /* SignUpViewController.swift */; };
+		5592A3F81CC135E50090BB53 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3F71CC135E50090BB53 /* MainViewController.swift */; };
+		5592A3FA1CC13D2A0090BB53 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3F91CC13D2A0090BB53 /* fondo.png */; };
+		5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3FD1CC13EAA0090BB53 /* cross@2x.png */; };
+		5592A4001CC13F0B0090BB53 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */; };
+		5592A4021CC141160090BB53 /* ConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A4011CC141160090BB53 /* ConnectionHelper.swift */; };
 		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
 		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
 		5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF365D1CBE5A2200E8A45F /* Main.storyboard */; };
@@ -39,11 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B03D08E1CC0210600D7EE59 /* log in google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "log in google.png"; path = "../../Downloads/log in google.png"; sourceTree = "<group>"; };
-		5B03D0901CC0210600D7EE59 /* log in facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "log in facebook.png"; path = "../../Downloads/log in facebook.png"; sourceTree = "<group>"; };
-		5B03D0911CC0210600D7EE59 /* sign in google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sign in google.png"; path = "../../Downloads/sign in google.png"; sourceTree = "<group>"; };
-		5B03D0971CC0278A00D7EE59 /* sign in facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sign in facebook.png"; path = "../../Downloads/sign in facebook.png"; sourceTree = "<group>"; };
-		5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fondo.png; path = "../6º - Curso 2015-2016/2º Cuatrimestre/ISST/TRABAJO ISST/fondo.png"; sourceTree = "<group>"; };
+		5592A3EE1CC132820090BB53 /* googleLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleLogIn.png; sourceTree = "<group>"; };
+		5592A3F11CC1329D0090BB53 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		5592A3F31CC1334F0090BB53 /* facebookLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogIn.png; sourceTree = "<group>"; };
+		5592A3F51CC133BF0090BB53 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5592A3F71CC135E50090BB53 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5592A3F91CC13D2A0090BB53 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
+		5592A3FD1CC13EAA0090BB53 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
+		5592A4011CC141160090BB53 /* ConnectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHelper.swift; sourceTree = "<group>"; };
 		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAF365B1CBE5A2200E8A45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,11 +95,10 @@
 		5B03D0961CC0210E00D7EE59 /* media */ = {
 			isa = PBXGroup;
 			children = (
-				5B03D08E1CC0210600D7EE59 /* log in google.png */,
-				5B03D0901CC0210600D7EE59 /* log in facebook.png */,
-				5B03D0911CC0210600D7EE59 /* sign in google.png */,
-				5B82BF2B1CBEB4BB00C2CCB8 /* fondo.png */,
-				5B03D0971CC0278A00D7EE59 /* sign in facebook.png */,
+				5592A3FD1CC13EAA0090BB53 /* cross@2x.png */,
+				5592A3F91CC13D2A0090BB53 /* fondo.png */,
+				5592A3F31CC1334F0090BB53 /* facebookLogIn.png */,
+				5592A3EE1CC132820090BB53 /* googleLogIn.png */,
 			);
 			name = media;
 			sourceTree = "<group>";
@@ -126,6 +133,11 @@
 				5BAF36601CBE5A2200E8A45F /* Assets.xcassets */,
 				5BAF36621CBE5A2200E8A45F /* LaunchScreen.storyboard */,
 				5BAF36651CBE5A2200E8A45F /* Info.plist */,
+				5592A3F11CC1329D0090BB53 /* LogInViewController.swift */,
+				5592A3F51CC133BF0090BB53 /* SignUpViewController.swift */,
+				5592A3F71CC135E50090BB53 /* MainViewController.swift */,
+				5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */,
+				5592A4011CC141160090BB53 /* ConnectionHelper.swift */,
 			);
 			path = Matacuas;
 			sourceTree = "<group>";
@@ -215,7 +227,7 @@
 				TargetAttributes = {
 					5BAF36551CBE5A2200E8A45F = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = F9M9TR6DUY;
+						DevelopmentTeam = YC472TTS6E;
 					};
 					5BAF36691CBE5A2200E8A45F = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -254,14 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5592A3FA1CC13D2A0090BB53 /* fondo.png in Resources */,
 				5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */,
-				5B03D0981CC0278A00D7EE59 /* sign in facebook.png in Resources */,
-				5B03D0941CC0210600D7EE59 /* log in facebook.png in Resources */,
-				5B03D0951CC0210600D7EE59 /* sign in google.png in Resources */,
+				5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */,
+				5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */,
+				5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
-				5B82BF2C1CBEB4BB00C2CCB8 /* fondo.png in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
-				5B03D0921CC0210600D7EE59 /* log in google.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +299,11 @@
 			files = (
 				5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */,
 				5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */,
+				5592A4021CC141160090BB53 /* ConnectionHelper.swift in Sources */,
+				5592A3F61CC133BF0090BB53 /* SignUpViewController.swift in Sources */,
+				5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */,
+				5592A3F81CC135E50090BB53 /* MainViewController.swift in Sources */,
+				5592A4001CC13F0B0090BB53 /* NewCommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matacuas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -439,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matacuas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
