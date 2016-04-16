@@ -224,6 +224,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="oGJ-WT-ghJ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="H64-bH-NKD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BbA-ue-nLH">
+                                <rect key="frame" x="20" y="11" width="70" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu.png"/>
+                                <connections>
+                                    <action selector="showDropdown:" destination="Plo-qM-mIS" eventType="touchUpInside" id="OvX-Tt-EXu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="xZc-ug-6Ej">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Bc-5g-EfO">
                                 <rect key="frame" x="462" y="-10" width="118" height="64"/>
@@ -238,6 +248,7 @@
                     <connections>
                         <outlet property="mapView" destination="SOk-iN-arZ" id="4h0-yq-134"/>
                         <outlet property="tableView" destination="p1W-xg-ktE" id="wgR-Hf-hIy"/>
+                        <segue destination="ARm-Is-q1E" kind="show" identifier="misComentarios" id="vul-OI-pKN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a52-at-1DW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +267,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Matricula" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSj-aF-7kZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Matricula" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSj-aF-7kZ">
                                 <rect key="frame" x="20" y="86" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -276,7 +287,7 @@
                                     <action selector="sendComment:" destination="nRy-jC-5lx" eventType="touchUpInside" id="aeS-sU-ksq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué ha pasado?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6su-03-Kw7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Qué ha pasado?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6su-03-Kw7">
                                 <rect key="frame" x="20" y="129" width="135" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="BCL-Z9-ynh"/>
@@ -286,7 +297,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afb-Jk-WpE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afb-Jk-WpE">
                                 <rect key="frame" x="20" y="158" width="560" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -318,6 +329,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmO-GS-IzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2528" y="-98"/>
+        </scene>
+        <!--Mis Comentarios Table View Controller-->
+        <scene sceneID="vzH-oe-MjE">
+            <objects>
+                <tableViewController id="ARm-Is-q1E" customClass="MisComentariosTableViewController" customModule="Matacuas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="181" sectionHeaderHeight="28" sectionFooterHeight="28" id="JA9-5U-la3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="comentCell" rowHeight="181" id="eci-h3-LO8" customClass="ComentarioTableViewCell" customModule="Matacuas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="181"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eci-h3-LO8" id="ok0-Lm-ZPI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-57-dUO">
+                                            <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.1333333333" green="0.75294117650000003" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Matricula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWo-yL-EcQ">
+                                            <rect key="frame" x="8" y="37" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Matricula" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-Ea-aCW">
+                                            <rect key="frame" x="8" y="66" width="584" height="69"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="69" id="igc-AK-Pv0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxi-tP-IKK">
+                                            <rect key="frame" x="485" y="151" width="107" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="N8a-1Q-DNK"/>
+                                                <constraint firstAttribute="width" constant="107" id="Reu-RR-uWb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="l4g-57-dUO" firstAttribute="top" secondItem="ok0-Lm-ZPI" secondAttribute="topMargin" id="5HQ-AW-xKi"/>
+                                        <constraint firstItem="IpC-Ea-aCW" firstAttribute="leading" secondItem="ok0-Lm-ZPI" secondAttribute="leadingMargin" id="BIf-0Z-pe4"/>
+                                        <constraint firstItem="IpC-Ea-aCW" firstAttribute="top" secondItem="eWo-yL-EcQ" secondAttribute="bottom" constant="8" id="D4r-Vk-2Em"/>
+                                        <constraint firstItem="eWo-yL-EcQ" firstAttribute="top" secondItem="l4g-57-dUO" secondAttribute="bottom" constant="8" id="R9B-51-x1B"/>
+                                        <constraint firstItem="eWo-yL-EcQ" firstAttribute="trailing" secondItem="ok0-Lm-ZPI" secondAttribute="trailingMargin" id="RL8-pS-FeV"/>
+                                        <constraint firstItem="uxi-tP-IKK" firstAttribute="trailing" secondItem="ok0-Lm-ZPI" secondAttribute="trailingMargin" id="W3A-WP-amF"/>
+                                        <constraint firstItem="uxi-tP-IKK" firstAttribute="bottom" secondItem="ok0-Lm-ZPI" secondAttribute="bottomMargin" id="Xlz-yx-15f"/>
+                                        <constraint firstItem="eWo-yL-EcQ" firstAttribute="leading" secondItem="ok0-Lm-ZPI" secondAttribute="leadingMargin" id="ZTg-OI-JDE"/>
+                                        <constraint firstItem="l4g-57-dUO" firstAttribute="leading" secondItem="ok0-Lm-ZPI" secondAttribute="leadingMargin" id="j4d-ja-BpR"/>
+                                        <constraint firstItem="l4g-57-dUO" firstAttribute="trailing" secondItem="ok0-Lm-ZPI" secondAttribute="trailingMargin" id="j7V-9Z-Tt0"/>
+                                        <constraint firstItem="IpC-Ea-aCW" firstAttribute="trailing" secondItem="ok0-Lm-ZPI" secondAttribute="trailingMargin" id="r90-YF-wIs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="comentarioLabel" destination="IpC-Ea-aCW" id="oZc-0c-XKl"/>
+                                    <outlet property="fechaLabel" destination="l4g-57-dUO" id="1CV-Tk-iC3"/>
+                                    <outlet property="matriculaLabel" destination="eWo-yL-EcQ" id="uVb-qH-5Ip"/>
+                                    <outlet property="statusLabel" destination="uxi-tP-IKK" id="yzA-5T-FdB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ARm-Is-q1E" id="CCR-7e-dea"/>
+                            <outlet property="delegate" destination="ARm-Is-q1E" id="25f-h4-Fvb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUW-FX-yCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528" y="685"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Pcj-fh-ATC">
@@ -402,6 +493,7 @@
         <image name="facebookLogIn.png" width="288" height="62"/>
         <image name="fondo.png" width="640" height="1136"/>
         <image name="googleLogIn.png" width="412" height="80"/>
+        <image name="menu.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="V30-7u-Mpq"/>

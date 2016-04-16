@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import AZDropdownMenu
+
 
 class MainViewController: UIViewController,MKMapViewDelegate{
 
@@ -16,6 +18,8 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     
     var myLatitude:CLLocationDegrees = 0.0
     var myLongitude: CLLocationDegrees = 0.0;
+    
+    let menu = AZDropdownMenu(titles: ["","Mis Comentarios"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +30,31 @@ class MainViewController: UIViewController,MKMapViewDelegate{
         locateUser();
         
         
-        
+        menu.cellTapHandler = { [weak self] (indexPath: NSIndexPath) -> Void in
+            if (indexPath.row == 1){
+                //Mis comentarios
+                self?.performSegueWithIdentifier("misComentarios", sender: nil)
+            }
+        }
+        menu.itemHeight = 64;
         
         
     }
     
+    @IBAction func showDropdown(sender: AnyObject) {
+        if (self.menu.isDescendantOfView(self.view) == true) {
+            self.menu.hideMenu()
+        } else {
+            self.menu.showMenuFromView(self.view)
+        }
+    }
+    
+    
+    
+    
     func locateUser(){
         //localizamos
         mapView.showsUserLocation = true;
-        
-        
-        
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {

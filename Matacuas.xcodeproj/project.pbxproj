@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F16435B315C968A8721A38 /* Pods_Matacuas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */; };
 		5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3EE1CC132820090BB53 /* googleLogIn.png */; };
 		5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3F11CC1329D0090BB53 /* LogInViewController.swift */; };
 		5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3F31CC1334F0090BB53 /* facebookLogIn.png */; };
@@ -16,6 +17,9 @@
 		5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3FD1CC13EAA0090BB53 /* cross@2x.png */; };
 		5592A4001CC13F0B0090BB53 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */; };
 		5592A4021CC141160090BB53 /* ConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A4011CC141160090BB53 /* ConnectionHelper.swift */; };
+		55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A0A5A51CC1BCD900CE300F /* menu@2x.png */; };
+		55A0A5A81CC1BFC200CE300F /* MisComentariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */; };
+		55A0A5AA1CC1C00E00CE300F /* ComentarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */; };
 		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
 		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
 		5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF365D1CBE5A2200E8A45F /* Main.storyboard */; };
@@ -43,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35914FB9B2E0096464F54662 /* Pods-Matacuas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matacuas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas.debug.xcconfig"; sourceTree = "<group>"; };
+		367B0F3917103912F0911641 /* Pods-Matacuas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matacuas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas.release.xcconfig"; sourceTree = "<group>"; };
+		41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matacuas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5592A3EE1CC132820090BB53 /* googleLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleLogIn.png; sourceTree = "<group>"; };
 		5592A3F11CC1329D0090BB53 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5592A3F31CC1334F0090BB53 /* facebookLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogIn.png; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		5592A3FD1CC13EAA0090BB53 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 		5592A4011CC141160090BB53 /* ConnectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHelper.swift; sourceTree = "<group>"; };
+		55A0A5A51CC1BCD900CE300F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisComentariosTableViewController.swift; sourceTree = "<group>"; };
+		55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentarioTableViewCell.swift; sourceTree = "<group>"; };
 		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAF365B1CBE5A2200E8A45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F16435B315C968A8721A38 /* Pods_Matacuas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +106,7 @@
 		5B03D0961CC0210E00D7EE59 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				55A0A5A51CC1BCD900CE300F /* menu@2x.png */,
 				5592A3FD1CC13EAA0090BB53 /* cross@2x.png */,
 				5592A3F91CC13D2A0090BB53 /* fondo.png */,
 				5592A3F31CC1334F0090BB53 /* facebookLogIn.png */,
@@ -111,6 +123,8 @@
 				5BAF36781CBE5A2200E8A45F /* MatacuasUITests */,
 				5BAF36571CBE5A2200E8A45F /* Products */,
 				5B03D0961CC0210E00D7EE59 /* media */,
+				B318B4AE53AD34E57901AD2E /* Pods */,
+				BCABB05E90F7339367B4BB92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +152,8 @@
 				5592A3F71CC135E50090BB53 /* MainViewController.swift */,
 				5592A3FF1CC13F0B0090BB53 /* NewCommentViewController.swift */,
 				5592A4011CC141160090BB53 /* ConnectionHelper.swift */,
+				55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */,
+				55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */,
 			);
 			path = Matacuas;
 			sourceTree = "<group>";
@@ -160,6 +176,23 @@
 			path = MatacuasUITests;
 			sourceTree = "<group>";
 		};
+		B318B4AE53AD34E57901AD2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35914FB9B2E0096464F54662 /* Pods-Matacuas.debug.xcconfig */,
+				367B0F3917103912F0911641 /* Pods-Matacuas.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCABB05E90F7339367B4BB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BAF367E1CBE5A2200E8A45F /* Build configuration list for PBXNativeTarget "Matacuas" */;
 			buildPhases = (
+				3611B894F3228F3E4CA75585 /* Check Pods Manifest.lock */,
 				5BAF36521CBE5A2200E8A45F /* Sources */,
 				5BAF36531CBE5A2200E8A45F /* Frameworks */,
 				5BAF36541CBE5A2200E8A45F /* Resources */,
+				3441061A70FB0A2AB9EF20AA /* Embed Pods Frameworks */,
+				FDB45A061141D84D453E4236 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +307,7 @@
 				5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */,
 				5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */,
 				5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */,
+				55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
 			);
@@ -292,6 +329,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3441061A70FB0A2AB9EF20AA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3611B894F3228F3E4CA75585 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDB45A061141D84D453E4236 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5BAF36521CBE5A2200E8A45F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -301,8 +386,10 @@
 				5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */,
 				5592A4021CC141160090BB53 /* ConnectionHelper.swift in Sources */,
 				5592A3F61CC133BF0090BB53 /* SignUpViewController.swift in Sources */,
+				55A0A5AA1CC1C00E00CE300F /* ComentarioTableViewCell.swift in Sources */,
 				5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */,
 				5592A3F81CC135E50090BB53 /* MainViewController.swift in Sources */,
+				55A0A5A81CC1BFC200CE300F /* MisComentariosTableViewController.swift in Sources */,
 				5592A4001CC13F0B0090BB53 /* NewCommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +528,7 @@
 		};
 		5BAF367F1CBE5A2200E8A45F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35914FB9B2E0096464F54662 /* Pods-Matacuas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -454,6 +542,7 @@
 		};
 		5BAF36801CBE5A2200E8A45F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 367B0F3917103912F0911641 /* Pods-Matacuas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
