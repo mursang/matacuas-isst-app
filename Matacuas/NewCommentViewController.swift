@@ -18,7 +18,7 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("latitude: \(latitude) + longitude: \(longitude)")
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
@@ -32,6 +32,7 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
         view.endEditing(true)
     }
     
+ 
 
     @IBAction func sendComment(sender: UIButton) {
         var correcto:Bool = false;
@@ -56,7 +57,7 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
         
         let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
         
-        myHelper.sendNewComment(String(format:"%f",longitude), latitude: String(format:"%f",latitude), matricula: matriculaTextField.text!, comentario: textView.text)
+        myHelper.sendNewComment("\(longitude)", longitude: "\(latitude)", matricula: matriculaTextField.text!, comentario: textView.text)
         
 
             let alert = UIAlertView()

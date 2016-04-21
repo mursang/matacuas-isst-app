@@ -14,17 +14,19 @@ import AZDropdownMenu
 class MainViewController: UIViewController,MKMapViewDelegate{
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
     
     var myLatitude:CLLocationDegrees = 0.0
     var myLongitude: CLLocationDegrees = 0.0;
     
     let menu = AZDropdownMenu(titles: ["","Mis Comentarios"])
+    let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
+    var jsonResponseDic:NSDictionary = NSDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mapView.delegate = self;
+        
       
         //localizamos al usuario nada mas entrar al mapa.
         locateUser();
@@ -37,9 +39,63 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             }
         }
         menu.itemHeight = 64;
+    
+        //llamamos a coger los comentarios.
+        myHelper.getAllComments()
         
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(MainViewController.reloadData(_:)),
+            name: "loadedAllComments",
+            object: nil)
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        myHelper.getAllComments()
+    }
+    
+    
+    
+    func reloadData(notification:NSNotification){
+        let userInfo:Dictionary<String,String!> = notification.userInfo as! Dictionary<String,String!>
+        let messageString:String = userInfo["jsonString"]!
+        let myDic = convertStringToDictionary(messageString)
+        jsonResponseDic = myDic!
+        
+        print(jsonResponseDic)
+        //MAP
+        loadPinsOnMap(jsonResponseDic)
+        
+    }
+    
+    func loadPinsOnMap(dic:NSDictionary){
+        mapView.removeAnnotations(mapView.annotations)
+        
+        for object in dic as NSDictionary{
+            let myInfoDic:NSDictionary = object.value as! NSDictionary
+            
+            let location = CLLocationCoordinate2DMake((myInfoDic["latitud"]?.doubleValue)!, (myInfoDic["longitud"]?.doubleValue)!)
+            
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = location
+            dropPin.title = myInfoDic["matricula"] as? String
+            mapView.addAnnotation(dropPin)
+        }
+        
+    }
+    
+    func convertStringToDictionary(text: String) -> [String:AnyObject]? {
+        if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
+            do {
+                return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return nil
+    }
+    
     
     @IBAction func showDropdown(sender: AnyObject) {
         if (self.menu.isDescendantOfView(self.view) == true) {
@@ -73,13 +129,27 @@ class MainViewController: UIViewController,MKMapViewDelegate{
         myLongitude = longitude
 
     }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if (annotation.coordinate.latitude != mapView.userLocation.coordinate.latitude && annotation.coordinate.longitude != mapView.userLocation.coordinate.longitude){
+            let newAnnotation:MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation1")
+            newAnnotation.pinColor = MKPinAnnotationColor.Green
+            newAnnotation.animatesDrop = true
+            return newAnnotation
+        }else{
+         
+            
+        }
+        
+        return nil
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
 
     

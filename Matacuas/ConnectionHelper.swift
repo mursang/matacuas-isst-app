@@ -14,14 +14,14 @@ class ConnectionHelper: NSObject {
     let serverURL = "http://1-dot-isst-matacuas-grupo12-1279.appspot.com";
     
     
-    func sendNewComment(longitude:String, latitude:String, matricula:String, comentario:String){
+    func sendNewComment(latitude:String, longitude:String, matricula:String, comentario:String){
         let myUserId:String = NSUserDefaults.standardUserDefaults().objectForKey("userId") as! String;
         
         let serviceURL = serverURL+"/NewInfraccion"
         var stringPost = "latitud="+latitude+"&longitud="+longitude+"&matricula="+matricula
         stringPost += "&descripcion="+comentario+"&userId="+myUserId
 
-        
+        print("ENVIO: "+stringPost)
         //generamos la peticion post
         let request = NSMutableURLRequest(URL: NSURL(string: serviceURL)!)
         request.HTTPMethod = "POST"
@@ -65,6 +65,24 @@ class ConnectionHelper: NSObject {
         }
         task.resume()
         
+        return ""
+    }
+    
+    func getAllComments() -> String{
+        let request = NSMutableURLRequest(URL: NSURL(string: serverURL+"/GetAllComments")!)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request,completionHandler :
+            {
+                data, response, error in
+                if error != nil {
+                    print("error=\(error)")
+                    return
+                } else {
+                    let responseString = NSString(data: data!, encoding: NSISOLatin1StringEncoding)
+                    NSNotificationCenter.defaultCenter().postNotificationName("loadedAllComments", object: nil, userInfo: ["jsonString":responseString!])
+                }
+        })
+        
+        task.resume()
         return ""
     }
     
