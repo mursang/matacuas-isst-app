@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Matacuas' do
 pod 'AZDropdownMenu'
+pod 'Google/SignIn'
 end
 
 target 'MatacuasTests' do

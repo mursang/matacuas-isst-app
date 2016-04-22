@@ -18,7 +18,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     var myLatitude:CLLocationDegrees = 0.0
     var myLongitude: CLLocationDegrees = 0.0;
     
-    let menu = AZDropdownMenu(titles: ["","Mis Comentarios"])
+    let menu = AZDropdownMenu(titles: ["","Mis Comentarios","Cerrar sesión"])
     let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
     var jsonResponseDic:NSDictionary = NSDictionary()
     
@@ -36,6 +36,10 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             if (indexPath.row == 1){
                 //Mis comentarios
                 self?.performSegueWithIdentifier("misComentarios", sender: nil)
+            }else if(indexPath.row == 2){
+                
+                GIDSignIn.sharedInstance().signOut()
+                self?.performSegueWithIdentifier("logOut", sender: nil)
             }
         }
         menu.itemHeight = 64;
@@ -52,6 +56,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     }
     
     override func viewWillAppear(animated: Bool) {
+        mapView.removeAnnotations(mapView.annotations)
         myHelper.getAllComments()
     }
     
@@ -70,7 +75,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     }
     
     func loadPinsOnMap(dic:NSDictionary){
-        mapView.removeAnnotations(mapView.annotations)
+        
         
         for object in dic as NSDictionary{
             let myInfoDic:NSDictionary = object.value as! NSDictionary

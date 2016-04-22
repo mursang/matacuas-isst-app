@@ -121,14 +121,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="051-Oy-SEo">
-                                <rect key="frame" x="179" y="450" width="242" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="RF8-Yr-6Ee"/>
-                                    <constraint firstAttribute="height" constant="44" id="ShB-v3-Rvy"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="facebookLogIn.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-lp-wb8">
                                 <rect key="frame" x="526" y="550" width="54" height="30"/>
                                 <constraints>
@@ -144,7 +136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-pe-5Nj">
-                                <rect key="frame" x="179" y="398" width="242" height="44"/>
+                                <rect key="frame" x="179" y="323" width="242" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="242" id="Gsm-6b-Q4h"/>
                                     <constraint firstAttribute="height" constant="44" id="Nax-Oq-SwT"/>
@@ -158,17 +150,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="NRD-Za-bWp" secondAttribute="trailing" constant="-20" id="3uh-9a-Amt"/>
-                            <constraint firstItem="lEm-DE-Cq8" firstAttribute="top" secondItem="051-Oy-SEo" secondAttribute="bottom" constant="106" id="9HY-sC-fKZ"/>
                             <constraint firstItem="NRD-Za-bWp" firstAttribute="top" secondItem="JXR-sU-ftv" secondAttribute="topMargin" id="DgI-7a-QRq"/>
                             <constraint firstItem="XrW-lp-wb8" firstAttribute="trailing" secondItem="JXR-sU-ftv" secondAttribute="trailingMargin" id="IyM-2H-tVz"/>
                             <constraint firstItem="qkT-pe-5Nj" firstAttribute="centerX" secondItem="NRD-Za-bWp" secondAttribute="centerX" id="LWs-kd-kLw"/>
                             <constraint firstItem="lEm-DE-Cq8" firstAttribute="top" secondItem="NRD-Za-bWp" secondAttribute="bottom" id="Oeo-HS-53q"/>
-                            <constraint firstItem="051-Oy-SEo" firstAttribute="top" secondItem="qkT-pe-5Nj" secondAttribute="bottom" constant="8" id="bGT-zO-XP6"/>
                             <constraint firstItem="NRD-Za-bWp" firstAttribute="leading" secondItem="JXR-sU-ftv" secondAttribute="leadingMargin" constant="-20" id="h4Y-Fc-KKH"/>
                             <constraint firstItem="hQa-Hu-Xal" firstAttribute="centerX" secondItem="NRD-Za-bWp" secondAttribute="centerX" id="jlL-Sl-PsC"/>
                             <constraint firstItem="hQa-Hu-Xal" firstAttribute="top" secondItem="am2-p4-zj3" secondAttribute="bottom" constant="80" id="sJf-yR-gk7"/>
+                            <constraint firstItem="lEm-DE-Cq8" firstAttribute="top" secondItem="qkT-pe-5Nj" secondAttribute="bottom" constant="233" id="vdR-xC-smh"/>
                             <constraint firstItem="lEm-DE-Cq8" firstAttribute="top" secondItem="XrW-lp-wb8" secondAttribute="bottom" constant="20" id="yXH-d4-W9J"/>
-                            <constraint firstItem="051-Oy-SEo" firstAttribute="centerX" secondItem="NRD-Za-bWp" secondAttribute="centerX" id="zS2-a4-RRv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -250,6 +240,7 @@
                     <connections>
                         <outlet property="mapView" destination="SOk-iN-arZ" id="4h0-yq-134"/>
                         <segue destination="ARm-Is-q1E" kind="show" identifier="misComentarios" id="vul-OI-pKN"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOut" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="7uO-bS-NMg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a52-at-1DW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -486,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTW-RT-ZB8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="1059"/>
+            <point key="canvasLocation" x="875" y="1088"/>
         </scene>
     </scenes>
     <resources>
@@ -497,7 +488,7 @@
         <image name="menu.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V30-7u-Mpq"/>
-        <segue reference="C4S-Xr-Pzm"/>
+        <segue reference="7uO-bS-NMg"/>
+        <segue reference="N7d-n4-FwC"/>
     </inferredMetricsTieBreakers>
 </document>

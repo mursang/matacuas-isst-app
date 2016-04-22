@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20F16435B315C968A8721A38 /* Pods_Matacuas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */; };
+		5565E68F1CC986C500339BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5565E68E1CC986C500339BD7 /* GoogleService-Info.plist */; };
 		5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3EE1CC132820090BB53 /* googleLogIn.png */; };
 		5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592A3F11CC1329D0090BB53 /* LogInViewController.swift */; };
 		5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5592A3F31CC1334F0090BB53 /* facebookLogIn.png */; };
@@ -50,6 +51,8 @@
 		35914FB9B2E0096464F54662 /* Pods-Matacuas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matacuas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas.debug.xcconfig"; sourceTree = "<group>"; };
 		367B0F3917103912F0911641 /* Pods-Matacuas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matacuas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matacuas/Pods-Matacuas.release.xcconfig"; sourceTree = "<group>"; };
 		41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matacuas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5565E68E1CC986C500339BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5565E6901CC9877F00339BD7 /* Matacuas-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matacuas-Bridging-Header.h"; sourceTree = "<group>"; };
 		5592A3EE1CC132820090BB53 /* googleLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleLogIn.png; sourceTree = "<group>"; };
 		5592A3F11CC1329D0090BB53 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5592A3F31CC1334F0090BB53 /* facebookLogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogIn.png; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		5BAF364D1CBE5A2200E8A45F = {
 			isa = PBXGroup;
 			children = (
+				5565E68E1CC986C500339BD7 /* GoogleService-Info.plist */,
 				5BAF36581CBE5A2200E8A45F /* Matacuas */,
 				5BAF366D1CBE5A2200E8A45F /* MatacuasTests */,
 				5BAF36781CBE5A2200E8A45F /* MatacuasUITests */,
@@ -154,6 +158,7 @@
 				5592A4011CC141160090BB53 /* ConnectionHelper.swift */,
 				55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */,
 				55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */,
+				5565E6901CC9877F00339BD7 /* Matacuas-Bridging-Header.h */,
 			);
 			path = Matacuas;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 		5BAF364E1CBE5A2200E8A45F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alberto Sagrado Amador";
 				TargetAttributes = {
@@ -307,6 +313,7 @@
 				5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */,
 				5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */,
 				5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */,
+				5565E68F1CC986C500339BD7 /* GoogleService-Info.plist in Resources */,
 				55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
@@ -531,12 +538,15 @@
 			baseConfigurationReference = 35914FB9B2E0096464F54662 /* Pods-Matacuas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matacuas/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.Matacuas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matacuas/Matacuas-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -545,12 +555,14 @@
 			baseConfigurationReference = 367B0F3917103912F0911641 /* Pods-Matacuas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Matacuas/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.upm.isst.Matacuas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matacuas/Matacuas-Bridging-Header.h";
 			};
 			name = Release;
 		};

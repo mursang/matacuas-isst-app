@@ -11,7 +11,7 @@ import UIKit
 class ConnectionHelper: NSObject {
     static let sharedInstance = ConnectionHelper()
     
-    let serverURL = "http://1-dot-isst-matacuas-grupo12-1279.appspot.com";
+    let serverURL = "http://1-dot-isst-matacuas-grupo12-1279.appspot.com"
     
     
     func sendNewComment(latitude:String, longitude:String, matricula:String, comentario:String){
@@ -85,6 +85,8 @@ class ConnectionHelper: NSObject {
         task.resume()
         return ""
     }
+    
+    
     
     
     
