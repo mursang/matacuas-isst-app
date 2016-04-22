@@ -77,10 +77,27 @@ class MisComentariosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("comentCell", forIndexPath: indexPath) as! ComentarioTableViewCell
 
         let myArray = Array(jsonDic.values)[indexPath.row]
-        cell.fechaLabel.text = myArray.objectForKey("fecha") as! String
-        cell.matriculaLabel.text = myArray.objectForKey("matricula") as! String
-        cell.comentarioLabel.text = myArray.objectForKey("descripcion") as! String
-        cell.statusLabel.text = "Pendiente"
+        
+        cell.fechaLabel.text = myArray.objectForKey("fecha") as? String
+        cell.matriculaLabel.text = "Matrícula: "+(myArray.objectForKey("matricula") as! String)
+        cell.comentarioLabel.text = myArray.objectForKey("descripcion") as? String
+        
+        let estado = myArray.objectForKey("aprobada") as? String
+        if (estado == "0"){
+            //pendiente
+            cell.statusLabel.text = "Pendiente"
+            cell.statusLabel.textColor = UIColor.blackColor()
+        }else if(estado == "1"){
+            //aprobada
+            cell.statusLabel.text = "Aprobada"
+            cell.statusLabel.textColor = UIColor.greenColor()
+        }else{
+            //rechazada
+            cell.statusLabel.text = "Rechazada"
+            cell.statusLabel.textColor = UIColor.redColor()
+        }
+        
+        
         
 
         return cell

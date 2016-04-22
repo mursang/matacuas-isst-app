@@ -46,6 +46,45 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
             correcto = true;
         }
         
+        //comprobamos que la matricula es valida
+        let matriculaText = matriculaTextField.text
+        if ((matriculaText?.rangeOfString("-")) != nil){
+            var matriculaValida = true
+            
+            //separamos la matricula en dos strings
+            var myArray = matriculaText?.componentsSeparatedByString("-")
+            let numeros = myArray![0] as String
+            let letras = myArray![1] as String
+            
+            if (numeros.characters.count != 4){
+                matriculaValida = false
+            }
+            //miramos que numeros sean numeros y no letras
+            if (Int(numeros) == nil){
+                matriculaValida = false
+            }
+            if (letras.characters.count != 3){
+                matriculaValida = false
+            }
+            
+            if (!matriculaValida){
+                let alert = UIAlertView()
+                alert.title = "ERROR"
+                alert.message = "La matrícula no parece válida"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+                return;
+            }
+            
+        }else{
+            let alert = UIAlertView()
+            alert.title = "ERROR"
+            alert.message = "La matrícula no parece válida"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            return;
+        }
+        
         if (!correcto){
             let alert = UIAlertView()
             alert.title = "ERROR"
