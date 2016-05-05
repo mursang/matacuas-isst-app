@@ -18,7 +18,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     var myLatitude:CLLocationDegrees = 0.0
     var myLongitude: CLLocationDegrees = 0.0;
     
-    let menu = AZDropdownMenu(titles: ["","Mis Comentarios","Cerrar sesión"])
+    let menu = AZDropdownMenu(titles: ["","Mis Comentarios","Comentarios recibidos","Cerrar sesión"])
     let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
     var jsonResponseDic:NSDictionary = NSDictionary()
     
@@ -36,7 +36,9 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             if (indexPath.row == 1){
                 //Mis comentarios
                 self?.performSegueWithIdentifier("misComentarios", sender: nil)
-            }else if(indexPath.row == 2){
+            }else if(indexPath.row==2){
+                 self?.performSegueWithIdentifier("comentariosRecibidos", sender: nil)
+            }else if(indexPath.row == 3){
                 
                 GIDSignIn.sharedInstance().signOut()
                 self?.performSegueWithIdentifier("logOut", sender: nil)

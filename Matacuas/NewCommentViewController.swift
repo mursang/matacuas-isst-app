@@ -16,6 +16,7 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
     
     @IBOutlet weak var matriculaTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("latitude: \(latitude) + longitude: \(longitude)")
@@ -112,6 +113,22 @@ class NewCommentViewController: UIViewController, UIAlertViewDelegate {
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    @IBAction func addPhoto(sender: AnyObject) {
+        
+        let actionSheetController: UIAlertController = UIAlertController(title: "Adjuntar foto", message: "Seleccionar modo", preferredStyle: .ActionSheet)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in}
+        actionSheetController.addAction(cancelAction)
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "Cámara", style: .Default) { action -> Void in
+           self.imageView.image = UIImage(named: "fotoParking.jpg")
+        }
+        actionSheetController.addAction(takePictureAction)
+        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Librería", style: .Default) { action -> Void in
+            self.imageView.image = UIImage(named: "fotoParking.jpg")
+        }
+        actionSheetController.addAction(choosePictureAction)
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

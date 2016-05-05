@@ -21,6 +21,8 @@
 		55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A0A5A51CC1BCD900CE300F /* menu@2x.png */; };
 		55A0A5A81CC1BFC200CE300F /* MisComentariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */; };
 		55A0A5AA1CC1C00E00CE300F /* ComentarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */; };
+		55D902EA1CDBF47400BA6CD2 /* fotoParking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55D902E91CDBF47400BA6CD2 /* fotoParking.jpg */; };
+		55D902EC1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D902EB1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift */; };
 		5BAF365A1CBE5A2200E8A45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */; };
 		5BAF365C1CBE5A2200E8A45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF365B1CBE5A2200E8A45F /* ViewController.swift */; };
 		5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF365D1CBE5A2200E8A45F /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		55A0A5A51CC1BCD900CE300F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisComentariosTableViewController.swift; sourceTree = "<group>"; };
 		55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentarioTableViewCell.swift; sourceTree = "<group>"; };
+		55D902E91CDBF47400BA6CD2 /* fotoParking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fotoParking.jpg; sourceTree = "<group>"; };
+		55D902EB1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentariosRecibidosTableViewController.swift; sourceTree = "<group>"; };
 		5BAF36561CBE5A2200E8A45F /* Matacuas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matacuas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF36591CBE5A2200E8A45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAF365B1CBE5A2200E8A45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		5B03D0961CC0210E00D7EE59 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				55D902E91CDBF47400BA6CD2 /* fotoParking.jpg */,
 				55A0A5A51CC1BCD900CE300F /* menu@2x.png */,
 				5592A3FD1CC13EAA0090BB53 /* cross@2x.png */,
 				5592A3F91CC13D2A0090BB53 /* fondo.png */,
@@ -159,6 +164,7 @@
 				55A0A5A71CC1BFC200CE300F /* MisComentariosTableViewController.swift */,
 				55A0A5A91CC1C00E00CE300F /* ComentarioTableViewCell.swift */,
 				5565E6901CC9877F00339BD7 /* Matacuas-Bridging-Header.h */,
+				55D902EB1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift */,
 			);
 			path = Matacuas;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 				5565E68F1CC986C500339BD7 /* GoogleService-Info.plist in Resources */,
 				55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
+				55D902EA1CDBF47400BA6CD2 /* fotoParking.jpg in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +401,7 @@
 				5592A4021CC141160090BB53 /* ConnectionHelper.swift in Sources */,
 				5592A3F61CC133BF0090BB53 /* SignUpViewController.swift in Sources */,
 				55A0A5AA1CC1C00E00CE300F /* ComentarioTableViewCell.swift in Sources */,
+				55D902EC1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift in Sources */,
 				5592A3F21CC1329D0090BB53 /* LogInViewController.swift in Sources */,
 				5592A3F81CC135E50090BB53 /* MainViewController.swift in Sources */,
 				55A0A5A81CC1BFC200CE300F /* MisComentariosTableViewController.swift in Sources */,
