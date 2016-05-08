@@ -19,13 +19,13 @@ class ComentarioTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        innerView.layer.cornerRadius = 15.0
+        //innerView.layer.cornerRadius = 15.0
         innerView.layer.borderColor = UIColor.lightGrayColor().CGColor
         innerView.layer.borderWidth = 1
         innerView.layer.shadowColor = UIColor.blackColor().CGColor
         innerView.layer.shadowOpacity = 0.4
         innerView.layer.shadowRadius = 2.0
-        innerView.layer.shadowOffset = CGSizeMake(0, 2.0)
+        innerView.layer.shadowOffset = CGSizeMake(0, 3.0)
         
         
     }

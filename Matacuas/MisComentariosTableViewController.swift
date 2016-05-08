@@ -103,14 +103,12 @@ class MisComentariosTableViewController: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let vc:DetailViewController = segue.destinationViewController as! DetailViewController
+        vc.jsonDic = jsonDic
+        
     }
-    */
 
     /*
     // Override to support editing the table view.

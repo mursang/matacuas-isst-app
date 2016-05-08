@@ -111,12 +111,25 @@ class ConnectionHelper: NSObject {
         return ""
     }
     
-    
-    
-    
-    
-    
-    
-    
-
+    func denunciarComentario(comentarioId:String) -> Void{
+        let myUserId:String = NSUserDefaults.standardUserDefaults().objectForKey("userId") as! String;
+        let serviceURL = serverURL+"/DenunciaComentario"
+        let stringPost = "userId="+myUserId+"&comentarioId="+comentarioId
+        
+        print(serviceURL + stringPost)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: serviceURL)!)
+        request.HTTPMethod = "POST"
+        let postString = stringPost
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error)")
+                return
+            }
+            let responseString = NSString(data: data!, encoding: NSISOLatin1StringEncoding)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+    }
 }

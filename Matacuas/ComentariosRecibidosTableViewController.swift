@@ -89,4 +89,14 @@ class ComentariosRecibidosTableViewController: UITableViewController {
         
         return cell
     }
+    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let vc:DetailViewController = segue.destinationViewController as! DetailViewController
+        vc.jsonDic = jsonDic
+        
+    }
+    
+    
 }
