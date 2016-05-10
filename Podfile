@@ -6,6 +6,7 @@ use_frameworks!
 target 'Matacuas' do
 pod 'AZDropdownMenu'
 pod 'Google/SignIn'
+pod 'MBProgressHUD', '~> 0.9.2'
 end
 
 target 'MatacuasTests' do

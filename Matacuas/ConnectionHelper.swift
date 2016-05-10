@@ -132,4 +132,72 @@ class ConnectionHelper: NSObject {
         }
         task.resume()
     }
+    
+    
+    func getComentarioParaModerar() -> String{
+        let request = NSMutableURLRequest(URL: NSURL(string: serverURL+"/GetComentarioModerar")!)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request,completionHandler :
+            {
+                data, response, error in
+                if error != nil {
+                    print("error=\(error)")
+                    return
+                } else {
+                    let responseString = NSString(data: data!, encoding: NSISOLatin1StringEncoding)
+                    NSNotificationCenter.defaultCenter().postNotificationName("loadedComentario", object: nil, userInfo: ["jsonString":responseString!])
+                }
+        })
+        
+        task.resume()
+        return ""
+    }
+    
+    
+    func rechazarComentario(comentarioId:String) -> Void{
+        let serviceURL = serverURL+"/RechazarComentario"
+        let stringPost = "comentarioId="+comentarioId
+        
+        print(serviceURL + stringPost)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: serviceURL)!)
+        request.HTTPMethod = "POST"
+        let postString = stringPost
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error)")
+                return
+            }
+            let responseString = NSString(data: data!, encoding: NSISOLatin1StringEncoding)
+            print("responseString = \(responseString)")
+            self.getComentarioParaModerar()
+        }
+        task.resume()
+    }
+    
+    func aprobarComentario(comentarioId:String) -> Void{
+        let serviceURL = serverURL+"/AprobarComentario"
+        let stringPost = "comentarioId="+comentarioId
+        
+        print(serviceURL + stringPost)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: serviceURL)!)
+        request.HTTPMethod = "POST"
+        let postString = stringPost
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error)")
+                return
+            }
+            let responseString = NSString(data: data!, encoding: NSISOLatin1StringEncoding)
+            print("responseString = \(responseString)")
+            self.getComentarioParaModerar()
+        }
+        task.resume()
+    }
+    
+
+    
+    
 }

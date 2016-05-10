@@ -50,6 +50,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
                  self?.performSegueWithIdentifier("comentariosRecibidos", sender: nil)
             }else if(indexPath.row == 3){
                 if (prefs.boolForKey("moderador")){ //moderar
+                    self?.performSegueWithIdentifier("moderarSegue", sender: nil)
                     
                 }else{ //logout
                     GIDSignIn.sharedInstance().signOut()

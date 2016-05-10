@@ -254,11 +254,116 @@
                         <segue destination="ARm-Is-q1E" kind="show" identifier="misComentarios" id="vul-OI-pKN"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOut" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="7uO-bS-NMg"/>
                         <segue destination="rjH-dG-Zku" kind="show" identifier="comentariosRecibidos" id="7Ub-lq-u7h"/>
+                        <segue destination="Pm0-J6-cGe" kind="show" identifier="moderarSegue" id="nwn-yM-ToS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a52-at-1DW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="370"/>
+        </scene>
+        <!--Moderar View Controller-->
+        <scene sceneID="plM-fS-MGm">
+            <objects>
+                <viewController id="Pm0-J6-cGe" customClass="ModerarViewController" customModule="Matacuas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sxI-f3-qDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="XSU-lF-Fkl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="54d-MQ-izE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdG-7R-afs">
+                                <rect key="frame" x="16" y="142" width="343" height="274"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1234-GMW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMa-qd-nBA">
+                                        <rect key="frame" x="8" y="8" width="327" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQo-Kz-E4z">
+                                        <rect key="frame" x="8" y="37" width="327" height="229"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.17136314655172413" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aQo-Kz-E4z" secondAttribute="trailing" constant="8" id="68o-Yf-LHM"/>
+                                    <constraint firstItem="aQo-Kz-E4z" firstAttribute="top" secondItem="GMa-qd-nBA" secondAttribute="bottom" constant="8" id="BW3-L7-Eir"/>
+                                    <constraint firstAttribute="height" constant="274" id="TC2-CR-3Fg"/>
+                                    <constraint firstAttribute="bottom" secondItem="aQo-Kz-E4z" secondAttribute="bottom" constant="8" id="acJ-uh-Dxm"/>
+                                    <constraint firstItem="GMa-qd-nBA" firstAttribute="leading" secondItem="zdG-7R-afs" secondAttribute="leading" constant="8" id="bdh-P9-vlw"/>
+                                    <constraint firstItem="GMa-qd-nBA" firstAttribute="top" secondItem="zdG-7R-afs" secondAttribute="top" constant="8" id="gxv-nP-VAZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GMa-qd-nBA" secondAttribute="trailing" constant="8" id="wVN-TX-yy7"/>
+                                    <constraint firstItem="aQo-Kz-E4z" firstAttribute="leading" secondItem="zdG-7R-afs" secondAttribute="leading" constant="8" id="ysm-R2-DDL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzd-EK-Y0Z">
+                                <rect key="frame" x="16" y="442" width="343" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYo-Zp-l85">
+                                        <rect key="frame" x="171" y="0.0" width="100" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CLW-14-K5d"/>
+                                        </constraints>
+                                        <state key="normal" image="aprobar.png"/>
+                                        <connections>
+                                            <action selector="aprobarComentario:" destination="Pm0-J6-cGe" eventType="touchUpInside" id="1GU-xY-apj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWf-Hq-wDO">
+                                        <rect key="frame" x="72" y="0.0" width="100" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="nNl-vh-918"/>
+                                        </constraints>
+                                        <state key="normal" image="rechazar.png"/>
+                                        <connections>
+                                            <action selector="rechazarComentario:" destination="Pm0-J6-cGe" eventType="touchUpInside" id="VBF-26-MiM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RYo-Zp-l85" secondAttribute="bottom" id="2wA-fX-jiV"/>
+                                    <constraint firstAttribute="bottom" secondItem="RYo-Zp-l85" secondAttribute="bottom" id="7RO-BX-UOh"/>
+                                    <constraint firstItem="uWf-Hq-wDO" firstAttribute="top" secondItem="xzd-EK-Y0Z" secondAttribute="top" id="9br-8k-s7V"/>
+                                    <constraint firstItem="RYo-Zp-l85" firstAttribute="top" secondItem="xzd-EK-Y0Z" secondAttribute="top" id="G5p-gu-OhF"/>
+                                    <constraint firstItem="RYo-Zp-l85" firstAttribute="leading" secondItem="uWf-Hq-wDO" secondAttribute="trailing" id="May-0e-qmT"/>
+                                    <constraint firstItem="RYo-Zp-l85" firstAttribute="top" secondItem="xzd-EK-Y0Z" secondAttribute="top" id="WFK-Mn-zrP"/>
+                                    <constraint firstItem="RYo-Zp-l85" firstAttribute="leading" secondItem="uWf-Hq-wDO" secondAttribute="trailing" id="axg-Pn-s4T"/>
+                                    <constraint firstAttribute="bottom" secondItem="uWf-Hq-wDO" secondAttribute="bottom" id="bxX-Rm-Whh"/>
+                                    <constraint firstAttribute="bottom" secondItem="uWf-Hq-wDO" secondAttribute="bottom" id="iss-Hb-l6t"/>
+                                    <constraint firstItem="uWf-Hq-wDO" firstAttribute="top" secondItem="xzd-EK-Y0Z" secondAttribute="top" id="mIX-gI-t41"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xzd-EK-Y0Z" firstAttribute="top" secondItem="zdG-7R-afs" secondAttribute="bottom" constant="26" id="IJc-Lk-fLY"/>
+                            <constraint firstItem="zdG-7R-afs" firstAttribute="top" secondItem="sxI-f3-qDX" secondAttribute="bottom" constant="78" id="Sb5-WR-8T0"/>
+                            <constraint firstItem="xzd-EK-Y0Z" firstAttribute="centerX" secondItem="54d-MQ-izE" secondAttribute="centerX" id="WZd-dX-pBD"/>
+                            <constraint firstItem="xzd-EK-Y0Z" firstAttribute="leading" secondItem="54d-MQ-izE" secondAttribute="leadingMargin" constant="-4" id="Xxz-nl-YXZ"/>
+                            <constraint firstItem="zdG-7R-afs" firstAttribute="trailing" secondItem="54d-MQ-izE" secondAttribute="trailingMargin" id="fKh-XD-o0L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xzd-EK-Y0Z" secondAttribute="trailing" constant="-4" id="fau-Mu-QMY"/>
+                            <constraint firstItem="zdG-7R-afs" firstAttribute="leading" secondItem="54d-MQ-izE" secondAttribute="leadingMargin" id="w24-dT-WfN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="aprobarButton" destination="RYo-Zp-l85" id="NiP-Vt-K4K"/>
+                        <outlet property="backgroundView" destination="zdG-7R-afs" id="Flp-T8-Ja7"/>
+                        <outlet property="descripcionTextView" destination="aQo-Kz-E4z" id="OJG-W8-vjy"/>
+                        <outlet property="matriculaLabel" destination="GMa-qd-nBA" id="MMe-ET-3cq"/>
+                        <outlet property="rechazarButton" destination="uWf-Hq-wDO" id="2NV-J1-a3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGf-qT-3Ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2415.5" y="-676.5"/>
         </scene>
         <!--New Comment View Controller-->
         <scene sceneID="bke-ET-yJU">
@@ -373,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmO-GS-IzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528" y="-98"/>
+            <point key="canvasLocation" x="2528" y="18"/>
         </scene>
         <!--Mis Comentarios Table View Controller-->
         <scene sceneID="vzH-oe-MjE">
@@ -726,16 +831,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aprobar.png" width="64" height="64"/>
         <image name="cross.png" width="22" height="22"/>
         <image name="facebookLogIn.png" width="288" height="62"/>
         <image name="fondo.png" width="640" height="1136"/>
         <image name="fotoParking.jpg" width="2592" height="1936"/>
         <image name="googleLogIn.png" width="412" height="80"/>
         <image name="menu.png" width="16" height="16"/>
+        <image name="rechazar.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N7d-n4-FwC"/>
-        <segue reference="C4S-Xr-Pzm"/>
+        <segue reference="V30-7u-Mpq"/>
+        <segue reference="7uO-bS-NMg"/>
         <segue reference="xur-28-HNV"/>
     </inferredMetricsTieBreakers>
 </document>
