@@ -17,14 +17,24 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     
     var myLatitude:CLLocationDegrees = 0.0
     var myLongitude: CLLocationDegrees = 0.0;
+
+    var menu = AZDropdownMenu(titles:[])
     
-    let menu = AZDropdownMenu(titles: ["","Mis Comentarios","Comentarios recibidos","Cerrar sesión"])
+    
     let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
     var jsonResponseDic:NSDictionary = NSDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if (prefs.boolForKey("moderador")){
+           menu = AZDropdownMenu(titles: ["","Mis Comentarios","Comentarios recibidos","Moderar","Cerrar sesión"])
+        }else{
+           menu = AZDropdownMenu(titles: ["","Mis Comentarios","Comentarios recibidos","Cerrar sesión"])
+        }
+        
+        
         mapView.delegate = self;
         
       
@@ -39,7 +49,14 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             }else if(indexPath.row==2){
                  self?.performSegueWithIdentifier("comentariosRecibidos", sender: nil)
             }else if(indexPath.row == 3){
-                
+                if (prefs.boolForKey("moderador")){ //moderar
+                    
+                }else{ //logout
+                    GIDSignIn.sharedInstance().signOut()
+                    self?.performSegueWithIdentifier("logOut", sender: nil)
+                }
+            }else if(indexPath.row == 4 && prefs.boolForKey("moderador")){
+                //logout
                 GIDSignIn.sharedInstance().signOut()
                 self?.performSegueWithIdentifier("logOut", sender: nil)
             }

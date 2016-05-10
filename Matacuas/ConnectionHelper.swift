@@ -2,7 +2,7 @@
 //  ConnectionHelper.swift
 //  Matacuas
 //
-//  Created by Angel Sans Muro on 15/4/16.
+//  Created by Alberto Sagrado Amador on 15/4/16.
 //  Copyright © 2016 Alberto Sagrado Amador. All rights reserved.
 //
 

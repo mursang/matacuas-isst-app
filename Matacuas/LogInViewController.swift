@@ -69,13 +69,18 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate{
         let myDic = convertStringToDictionary(jsonString as String)
         print(myDic)
         //si el status es true, ok
-        if (myDic!["status"] as! String == "true"){
+        if (myDic!["status"] as! Bool){
             print(myDic!["userId"] as! String)
             //guardamos en las settings de la app el userId para poder comunicarnos con el servidor
             let userId = myDic!["userId"];
-            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults();
-            prefs.setValue(userId, forKeyPath: "userId");
-            prefs.synchronize();
+            let moderador:Bool = myDic!["moderador"] as! Bool;
+            
+            
+            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            prefs.setBool(moderador, forKey: "moderador")
+            prefs.setValue(userId, forKeyPath: "userId")
+            prefs.synchronize()
+            
             //segue
            self.performSegueWithIdentifier("mainSegue", sender: nil);
         }else{
