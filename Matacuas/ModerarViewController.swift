@@ -39,7 +39,7 @@ class ModerarViewController: UIViewController {
         backgroundView.layer.cornerRadius = 12.0
         matriculaLabel.text = ""
         descripcionTextView.text = ""
-        descripcionTextView.textAlignment = NSTextAlignment.Center
+        descripcionTextView.textAlignment = .Center
         //retrasamos la carga de la view 1 segundo
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(ModerarViewController.cargaViewDelay), userInfo: nil, repeats: false)
     }
@@ -64,7 +64,8 @@ class ModerarViewController: UIViewController {
                 self.aprobarButton.enabled = true
                 
                 self.matriculaLabel.text = jsonDic["matricula"] as? String
-                self.descripcionTextView.text = jsonDic["descripcion"] as? String
+                let texto = String(format: "\n %@", (jsonDic["descripcion"] as? String)!)
+                self.descripcionTextView.text = texto
             }else{
                 let alert = UIAlertView()
                 alert.delegate = self

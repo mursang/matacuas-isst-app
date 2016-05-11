@@ -16,6 +16,10 @@ class ComentariosRecibidosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let myColor:UIColor = UIColor(red:230.0/255.0,green:230.0/255.0,blue:230.0/255.0,alpha:1)
+        
+        self.tableView.backgroundColor = myColor
+        
         self.title = "Comentarios recibidos"
         
         let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
@@ -40,6 +44,46 @@ class ComentariosRecibidosTableViewController: UITableViewController {
         let myDic = convertStringToDictionary(jsonString)
         jsonDic = myDic!
         self.tableView.reloadData()
+        
+    }
+    
+    func shareButton(sender:AnyObject){
+        
+        let buttonPosition:CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
+        let indexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)
+        if indexPath != nil {
+            let myArray = Array(jsonDic.values)[indexPath!.row]
+            let shareHelper:ShareHelper = ShareHelper.sharedInstance
+            let matricula:String = myArray.objectForKey("matricula") as! String
+            let comentario:String = (myArray.objectForKey("descripcion") as? String)!
+            let textoCompartir:String = "\(matricula): \(comentario). Vía @MatacuasApp"
+            let latitud:String = myArray.objectForKey("latitud") as! String
+            let longitud:String = myArray.objectForKey("longitud") as! String
+            
+            let localizacion:String = "https://www.google.com/maps/search/\(latitud),\(longitud)"
+            
+            //ya tenemos la celda. Ahora abrimos el menu de Share
+            let actionSheetController: UIAlertController = UIAlertController(title: "Compartir en...", message: "", preferredStyle: .ActionSheet)
+            
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Cancelar", style: .Cancel) { action -> Void in}
+            actionSheetController.addAction(cancelAction)
+            let twitterAction: UIAlertAction = UIAlertAction(title: "Twitter", style: .Default) { action -> Void in
+                shareHelper.shareOnTwitter(self, text:textoCompartir)
+            }
+            actionSheetController.addAction(twitterAction)
+            let facebookAction: UIAlertAction = UIAlertAction(title: "Facebook", style: .Default) { action -> Void in
+                shareHelper.shareOnFacebook(self, text:textoCompartir)
+                
+            }
+            actionSheetController.addAction(facebookAction)
+            let otherAction: UIAlertAction = UIAlertAction(title: "Otros", style: .Default) { action -> Void in
+                shareHelper.shareOthers(self, text: textoCompartir,location:localizacion)
+            }
+            actionSheetController.addAction(otherAction)
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+            
+        }
+        
         
     }
     
@@ -82,10 +126,8 @@ class ComentariosRecibidosTableViewController: UITableViewController {
         cell.fechaLabel.text = myArray.objectForKey("fecha") as? String
         cell.matriculaLabel.text = "Matrícula: "+(myArray.objectForKey("matricula") as! String)
         cell.comentarioLabel.text = myArray.objectForKey("descripcion") as? String
-        cell.statusLabel.text = ""
         
-        
-        
+        cell.shareButton.addTarget(self, action: #selector(MisComentariosTableViewController.shareButton), forControlEvents: UIControlEvents.TouchUpInside)
         
         return cell
     }

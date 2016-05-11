@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		20F16435B315C968A8721A38 /* Pods_Matacuas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */; };
 		5565E68F1CC986C500339BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5565E68E1CC986C500339BD7 /* GoogleService-Info.plist */; };
+		55783FC91CE3322100501FC8 /* aprobada@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55783FC61CE3322100501FC8 /* aprobada@2x.png */; };
+		55783FCA1CE3322100501FC8 /* pendiente@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55783FC71CE3322100501FC8 /* pendiente@2x.png */; };
+		55783FCB1CE3322100501FC8 /* rechazada@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55783FC81CE3322100501FC8 /* rechazada@2x.png */; };
+		55783FCD1CE335CB00501FC8 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 55783FCC1CE335CB00501FC8 /* share.png */; };
+		55783FCF1CE33B3600501FC8 /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783FCE1CE33B3600501FC8 /* ShareHelper.swift */; };
 		55838E661CE26C4A00C80236 /* aprobar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55838E641CE26C4A00C80236 /* aprobar.png */; };
 		55838E671CE26C4A00C80236 /* rechazar.png in Resources */ = {isa = PBXBuildFile; fileRef = 55838E651CE26C4A00C80236 /* rechazar.png */; };
 		55838E691CE26DC300C80236 /* ModerarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55838E681CE26DC300C80236 /* ModerarViewController.swift */; };
@@ -59,6 +64,11 @@
 		41250D40EBDDA8A3BA0A8427 /* Pods_Matacuas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matacuas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5565E68E1CC986C500339BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5565E6901CC9877F00339BD7 /* Matacuas-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matacuas-Bridging-Header.h"; sourceTree = "<group>"; };
+		55783FC61CE3322100501FC8 /* aprobada@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aprobada@2x.png"; sourceTree = "<group>"; };
+		55783FC71CE3322100501FC8 /* pendiente@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pendiente@2x.png"; sourceTree = "<group>"; };
+		55783FC81CE3322100501FC8 /* rechazada@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rechazada@2x.png"; sourceTree = "<group>"; };
+		55783FCC1CE335CB00501FC8 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		55783FCE1CE33B3600501FC8 /* ShareHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
 		55838E641CE26C4A00C80236 /* aprobar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprobar.png; sourceTree = "<group>"; };
 		55838E651CE26C4A00C80236 /* rechazar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rechazar.png; sourceTree = "<group>"; };
 		55838E681CE26DC300C80236 /* ModerarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModerarViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +131,10 @@
 		5B03D0961CC0210E00D7EE59 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				55783FCC1CE335CB00501FC8 /* share.png */,
+				55783FC61CE3322100501FC8 /* aprobada@2x.png */,
+				55783FC71CE3322100501FC8 /* pendiente@2x.png */,
+				55783FC81CE3322100501FC8 /* rechazada@2x.png */,
 				55838E641CE26C4A00C80236 /* aprobar.png */,
 				55838E651CE26C4A00C80236 /* rechazar.png */,
 				55D902E91CDBF47400BA6CD2 /* fotoParking.jpg */,
@@ -177,6 +191,7 @@
 				55D902EB1CDBF5C900BA6CD2 /* ComentariosRecibidosTableViewController.swift */,
 				55E3686C1CDF906000993F5A /* DetailViewController.swift */,
 				55838E681CE26DC300C80236 /* ModerarViewController.swift */,
+				55783FCE1CE33B3600501FC8 /* ShareHelper.swift */,
 			);
 			path = Matacuas;
 			sourceTree = "<group>";
@@ -326,15 +341,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55783FCA1CE3322100501FC8 /* pendiente@2x.png in Resources */,
 				5592A3FA1CC13D2A0090BB53 /* fondo.png in Resources */,
 				5BAF36641CBE5A2200E8A45F /* LaunchScreen.storyboard in Resources */,
 				5592A3F01CC132820090BB53 /* googleLogIn.png in Resources */,
+				55783FCB1CE3322100501FC8 /* rechazada@2x.png in Resources */,
 				55838E671CE26C4A00C80236 /* rechazar.png in Resources */,
 				5592A3F41CC1334F0090BB53 /* facebookLogIn.png in Resources */,
+				55783FC91CE3322100501FC8 /* aprobada@2x.png in Resources */,
 				5592A3FE1CC13EAA0090BB53 /* cross@2x.png in Resources */,
 				5565E68F1CC986C500339BD7 /* GoogleService-Info.plist in Resources */,
 				55838E661CE26C4A00C80236 /* aprobar.png in Resources */,
 				55A0A5A61CC1BCD900CE300F /* menu@2x.png in Resources */,
+				55783FCD1CE335CB00501FC8 /* share.png in Resources */,
 				5BAF36611CBE5A2200E8A45F /* Assets.xcassets in Resources */,
 				55D902EA1CDBF47400BA6CD2 /* fotoParking.jpg in Resources */,
 				5BAF365F1CBE5A2200E8A45F /* Main.storyboard in Resources */,
@@ -422,6 +441,7 @@
 				55A0A5A81CC1BFC200CE300F /* MisComentariosTableViewController.swift in Sources */,
 				5592A4001CC13F0B0090BB53 /* NewCommentViewController.swift in Sources */,
 				55838E691CE26DC300C80236 /* ModerarViewController.swift in Sources */,
+				55783FCF1CE33B3600501FC8 /* ShareHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
