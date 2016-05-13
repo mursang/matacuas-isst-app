@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class LogInViewController: UIViewController, GIDSignInUIDelegate{
     let serverURL = "http://1-dot-isst-matacuas-grupo12-1279.appspot.com"
@@ -24,7 +25,8 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate{
      //simulamos un login con un usuario.
      @IBAction func logInGoogle(sender: UIButton) {
         
-
+        let hud:MBProgressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Cargando..."
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,
@@ -82,10 +84,16 @@ class LogInViewController: UIViewController, GIDSignInUIDelegate{
             prefs.synchronize()
             
             //segue
+            dispatch_async(dispatch_get_main_queue(),{
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+            })
            self.performSegueWithIdentifier("mainSegue", sender: nil);
         }else{
             //hay que registrar
             //si el status no es true, debemos pedirle que se registre con la matrícula.
+            dispatch_async(dispatch_get_main_queue(),{
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+            })
             print("no existe en la bbdd")
             
         }

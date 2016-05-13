@@ -112,7 +112,6 @@ class ComentariosRecibidosTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
         return jsonDic.count
         
     }
@@ -122,22 +121,27 @@ class ComentariosRecibidosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("comentCell", forIndexPath: indexPath) as! ComentarioTableViewCell
         
         let myArray = Array(jsonDic.values)[indexPath.row]
-        
         cell.fechaLabel.text = myArray.objectForKey("fecha") as? String
         cell.matriculaLabel.text = "Matrícula: "+(myArray.objectForKey("matricula") as! String)
         cell.comentarioLabel.text = myArray.objectForKey("descripcion") as? String
         
         cell.shareButton.addTarget(self, action: #selector(MisComentariosTableViewController.shareButton), forControlEvents: UIControlEvents.TouchUpInside)
-        
         return cell
     }
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let index:NSIndexPath = sender as! NSIndexPath
+        
+        let myArray = Array(jsonDic.values)[index.row]
         
         let vc:DetailViewController = segue.destinationViewController as! DetailViewController
-        vc.jsonDic = jsonDic
+        vc.jsonDic = myArray as! [String : AnyObject]
         
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("detailSegue", sender: indexPath)
     }
     
     

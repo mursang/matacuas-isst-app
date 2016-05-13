@@ -28,10 +28,11 @@ class DetailViewController: UIViewController {
         
         
         
-        let myArray = Array(jsonDic.values)[0]
-        matriculaTextfield.text = myArray.objectForKey("matricula") as? String
-        descripcionTextfield.text = myArray.objectForKey("descripcion") as? String
-        comentarioId = myArray.objectForKey("id") as! String
+        matriculaTextfield.text = jsonDic["matricula"] as? String
+        descripcionTextfield.text = jsonDic["descripcion"] as? String
+        comentarioId = jsonDic["id"] as! String
+        print("RECIBIDO")
+        print(jsonDic)
     }
     
     func denunciar(){

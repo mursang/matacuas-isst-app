@@ -145,11 +145,17 @@ class MisComentariosTableViewController: UITableViewController {
         
         
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("detailSegue", sender: indexPath)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let index:NSIndexPath = sender as! NSIndexPath
+        
+        let myArray = Array(jsonDic.values)[index.row]
         
         let vc:DetailViewController = segue.destinationViewController as! DetailViewController
-        vc.jsonDic = jsonDic
+        vc.jsonDic = myArray as! [String : AnyObject]
         
     }
 
@@ -180,14 +186,6 @@ class MisComentariosTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

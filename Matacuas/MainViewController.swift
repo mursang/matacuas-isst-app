@@ -24,6 +24,8 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     let myHelper:ConnectionHelper = ConnectionHelper.sharedInstance
     var jsonResponseDic:NSDictionary = NSDictionary()
     
+    var zoomed:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,7 +106,7 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             
             let dropPin = MKPointAnnotation()
             dropPin.coordinate = location
-            dropPin.title = myInfoDic["matricula"] as? String
+            dropPin.title = myInfoDic["descripcion"] as? String
             mapView.addAnnotation(dropPin)
         }
         
@@ -132,27 +134,27 @@ class MainViewController: UIViewController,MKMapViewDelegate{
     
     
     
-    
     func locateUser(){
         //localizamos
         mapView.showsUserLocation = true;
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        //hacemos zoom
         let latitude:CLLocationDegrees = (mapView.userLocation.location?.coordinate.latitude)!;
         let longitude:CLLocationDegrees = (mapView.userLocation.location?.coordinate.longitude)!;
-        let latDelta:CLLocationDegrees = 0.02
-        let lonDelta:CLLocationDegrees = 0.02
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        
-        mapView.setRegion(region, animated: true)
-        
+        //hacemos zoom
+        if (!zoomed){
+            let latDelta:CLLocationDegrees = 0.02
+            let lonDelta:CLLocationDegrees = 0.02
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+            let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            
+            mapView.setRegion(region, animated: true)
+            zoomed = true
+        }
         myLatitude = latitude
         myLongitude = longitude
-
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -161,6 +163,8 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             let newAnnotation:MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation1")
             newAnnotation.pinColor = MKPinAnnotationColor.Green
             newAnnotation.animatesDrop = true
+            newAnnotation.canShowCallout = true
+            newAnnotation.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
             return newAnnotation
         }else{
          
@@ -169,6 +173,23 @@ class MainViewController: UIViewController,MKMapViewDelegate{
         
         return nil
         
+    }
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        for object in jsonResponseDic as NSDictionary{
+            let myInfoDic:NSDictionary = object.value as! NSDictionary
+            let myDesc:String = myInfoDic["descripcion"] as! String
+            let myTitle:String = (view.annotation?.title!)!
+            
+            print(myDesc)
+            print(myTitle)
+            
+            if (myDesc == myTitle){
+                print(myInfoDic)
+                 self.performSegueWithIdentifier("detailMap", sender: myInfoDic)
+                break;
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -188,6 +209,9 @@ class MainViewController: UIViewController,MKMapViewDelegate{
             myVC.latitude = myLatitude
             myVC.longitude = myLongitude
             
+        }else if(segue.identifier == "detailMap"){
+            let myVC: DetailViewController = segue.destinationViewController as! DetailViewController
+            myVC.jsonDic = sender as! [String : AnyObject]
         }
     }
     
