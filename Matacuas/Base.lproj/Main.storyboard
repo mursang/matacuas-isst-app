@@ -58,14 +58,29 @@
                                     <segue destination="cQL-2B-90O" kind="presentation" modalTransitionStyle="crossDissolve" id="UOv-p0-eFg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-3a-ngN">
+                                <rect key="frame" x="508" y="562" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="Am5-du-gZG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Saltar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iFI-Ws-Okc" kind="show" id="wEL-VE-QSY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h5W-Hu-KZS" secondAttribute="bottom" id="7Gm-QD-Y2J"/>
                             <constraint firstAttribute="trailing" secondItem="h5W-Hu-KZS" secondAttribute="trailing" id="Di9-tk-Jev"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OkJ-3a-ngN" secondAttribute="bottom" constant="8" id="DpB-i2-s10"/>
                             <constraint firstItem="h5W-Hu-KZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Hl7-uN-2BF"/>
                             <constraint firstItem="MTC-ju-Ggi" firstAttribute="centerX" secondItem="Oz2-xP-bKv" secondAttribute="centerX" id="MCu-7z-Fyf"/>
                             <constraint firstItem="Oz2-xP-bKv" firstAttribute="centerX" secondItem="h5W-Hu-KZS" secondAttribute="centerX" id="RWx-iE-R8H"/>
+                            <constraint firstItem="OkJ-3a-ngN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TEx-q7-igF"/>
                             <constraint firstItem="0LB-Uq-YgI" firstAttribute="top" secondItem="MTC-ju-Ggi" secondAttribute="bottom" constant="25" id="UmX-rb-lCY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h5W-Hu-KZS" secondAttribute="bottom" id="dFf-aW-Xba"/>
                             <constraint firstItem="h5W-Hu-KZS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dfE-c1-j7Y"/>
@@ -844,8 +859,9 @@
         <image name="share.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UOv-p0-eFg"/>
+        <segue reference="wEL-VE-QSY"/>
         <segue reference="7uO-bS-NMg"/>
+        <segue reference="UOv-p0-eFg"/>
         <segue reference="8mJ-Td-I4R"/>
     </inferredMetricsTieBreakers>
 </document>
