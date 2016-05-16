@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var matriculaTextfield: UITextField!
     @IBOutlet weak var descripcionTextfield: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,11 @@ class DetailViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = denunciarButton
         
         
-        
-        matriculaTextfield.text = jsonDic["matricula"] as? String
+        let matricula:String = jsonDic["matricula"] as! String
+        if (matricula != "2150-GMW"){
+            imageView.image = UIImage()
+        }
+        matriculaTextfield.text = matricula
         descripcionTextfield.text = jsonDic["descripcion"] as? String
         comentarioId = jsonDic["id"] as! String
         print("RECIBIDO")

@@ -839,6 +839,7 @@
                     </view>
                     <connections>
                         <outlet property="descripcionTextfield" destination="H43-CJ-RK4" id="dhB-ar-HaS"/>
+                        <outlet property="imageView" destination="yxK-zl-Upt" id="QN1-N4-XHs"/>
                         <outlet property="matriculaTextfield" destination="3jo-4C-bm7" id="jyn-aK-gS6"/>
                     </connections>
                 </viewController>
